@@ -5,7 +5,7 @@ import os
 # configure cors_allowed_origins
 if os.environ.get('FLASK_ENV') == 'production':
     origins = [
-        'https://banter-uhs0.onrender.com/'
+        'https://banter-uhs0.onrender.com'
     ]
 else:
     origins = "*"
