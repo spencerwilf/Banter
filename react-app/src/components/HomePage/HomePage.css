@@ -24,16 +24,23 @@
 
 .home-page-main-section-logged-out-image {
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     margin-left: 2rem;
     border-radius: 12px;
     object-fit: contain;
 }
 
+.banter-logged-out-header {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+}
+
 .home-page-button-div {
     display: flex;
     flex-direction: column;
-    max-width: 20rem;
+    /* max-width: 20rem; */
+    margin-top: 2rem;
 }
 
 .home-page-demo-login {
@@ -45,7 +52,7 @@
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .home-page-demo-login:hover {
@@ -112,6 +119,11 @@
     white-space: nowrap;
 }
 
+.team-card-socials-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
 .meet-the-team-home a {
     text-decoration: none;
     color: #4A164B;
@@ -142,6 +154,10 @@
 
 .home-page-logged-out-left {
     margin-right: 2rem;
+}
+
+.home-page-logged-out-left button {
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .carousel-container {
@@ -187,4 +203,51 @@
     100% {
       transform: translateX(100%);
     }
+  }
+
+
+  .add-a-workspace {
+    display: flex;
+    margin-top: 5rem;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    height: 10vh;
+    width: 80vw;
+    justify-content: space-between;
+    /* border: 4px solid rgba(255, 255, 255, .2); */
+        border-radius: 9px;
+        max-width: 1050px;
+        border: 5px solid #6F456F;
+  }
+
+  .signed-in-workspaces-clipart {
+    height: 135%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20%;
+        max-width: 210px;
+  }
+
+
+  .create-new-ws-container-button {
+    margin-right: 2rem;
+    background-color: #4a164b00;
+    border: 1px solid #4A164B;
+    color: #4A164B;
+    border-radius: 8px;
+    padding: .6rem;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  .create-new-ws-container-button:hover {
+    color: white;
+    background-color: #4A164B;
+  }
+
+  .test {
+    display: flex;
+    font-size: 40px;
   }

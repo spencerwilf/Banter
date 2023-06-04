@@ -20,6 +20,7 @@ import python from "../../media/python.png";
 import js from "../../media/js.png";
 import css from "../../media/css.png";
 import html from "../../media/html.png";
+import workspace from '../../media/add-workspace.png'
 
 const HomePage = () => {
   const sessionUser = useSelector((state) => state.session.user);
@@ -29,6 +30,11 @@ const HomePage = () => {
   const onClick = () => {
     dispatch(login("demo@aa.io", "password"));
     history.push("/");
+  };
+
+  const handleCreateWorkspace = (e) => {
+    e.preventDefault();
+    history.push(`/create-workspace`);
   };
 
   return (
@@ -63,7 +69,7 @@ const HomePage = () => {
           <div className="team-flex-test">
             <h1>Made with love by...</h1>
             <div className="meet-the-team-home">
-              <a target="_blank" href="https://github.com/spencerwilf">
+             
                 <div className="team-member-card">
                   <img
                     className="team-member-card-image"
@@ -71,10 +77,17 @@ const HomePage = () => {
                     alt="spencer"
                   />
                   <h3>Spencer Wilfahrt</h3>
-                  <h5>Check out my Github!</h5>
+                  <div className='team-card-socials-wrapper'>
+                  <a target="_blank" href="https://www.linkedin.com/in/spencer-wilfahrt-1a4604156/">
+                  <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a target="_blank" href="https://github.com/spencerwilf">
+                  <i class="fa-brands fa-github"></i>
+                  </a>
+                  </div>
                 </div>
-              </a>
-              <a target="_blank" href="https://github.com/cleggie66">
+            
+           
                 <div className="team-member-card">
                   <img
                     className="team-member-card-image"
@@ -82,10 +95,17 @@ const HomePage = () => {
                     alt="caleb"
                   />
                   <h3>Caleb Cleghorn</h3>
-                  <h5>Check out my Github!</h5>
+                  <div className='team-card-socials-wrapper'>
+                    <a target="_blank" href="https://www.linkedin.com/in/caleb-cleghorn-31843b189/">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/cleggie66">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
                 </div>
-              </a>
-              <a target="_blank" href="https://github.com/StevenBradleyA">
+         
+             
                 <div className="team-member-card">
                   <img
                     className="team-member-card-image"
@@ -93,10 +113,17 @@ const HomePage = () => {
                     alt="steven"
                   />
                   <h3>Steven Anderson</h3>
-                  <h5>Check out my Github!</h5>
+                  <div className='team-card-socials-wrapper'>
+                  <a target="_blank" href="https://www.linkedin.com/in/stevenanderson-dev/">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                  <a target="_blank" href="https://github.com/StevenBradleyA">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
                 </div>
-              </a>
-              <a target="_blank" href="https://github.com/JakeG97">
+            
+           
                 <div className="team-member-card">
                   <img
                     className="team-member-card-image"
@@ -104,9 +131,16 @@ const HomePage = () => {
                     alt="jake"
                   />
                   <h3>Jake Gularte</h3>
-                  <h5>Check out my Github!</h5>
+                  <div className='team-card-socials-wrapper'>
+                  <a target="_blank" href="https://www.linkedin.com/in/jake-gularte-a8904b19b/">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                  <a target="_blank" href="https://github.com/JakeG97">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
                 </div>
-              </a>
+            
             </div>
           </div>
 
@@ -182,7 +216,9 @@ const HomePage = () => {
             </div>
 
           </div>
+          {/* <div>Footer</div> */}
         </div>
+       
 
       )}
 
@@ -196,8 +232,14 @@ const HomePage = () => {
           </div>
 
           <WorkspacesIndex />
+          <div className="add-a-workspace">
+            <img className="signed-in-workspaces-clipart"  src={workspace} alt="" />
+            <p style={{ color:'#4A174B', marginLeft:'17vw', fontWeight:'700'}}>Want to use Banter with a different team?</p>
+            <button className="create-new-ws-container-button" onClick={handleCreateWorkspace}>CREATE A NEW WORKSPACE</button>
+          </div>
         </div>
       )}
+
     </div>
   );
 };
